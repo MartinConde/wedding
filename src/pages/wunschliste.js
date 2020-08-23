@@ -163,6 +163,7 @@ const ProductImage = styled.div`
 const ProductTitle = styled.h2`
   font-size: 18px;
   margin: 25px;
+  font-family: Raleway;
 `
 
 const ProductButton = styled.a`
