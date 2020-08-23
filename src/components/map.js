@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
+import {  AnimateSharedLayout, AnimatePresence } from "framer-motion"
 
 import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 
@@ -39,7 +39,7 @@ const myIcon = L.icon({
                 ? "https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}"
                 : "https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}"
             }
-            attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'
             minZoom="0"
             maxZoom="22"
             subdomains="abcd"
@@ -49,7 +49,7 @@ const myIcon = L.icon({
             <Popup>
               <h3>Hof Appelbü</h3>
               <p>24861 Bergenhusen, Schleswig Holstein</p>
-              <a href="https://goo.gl/maps/dScYJjtu87cBHCGq6" target="_blank">
+              <a href="https://goo.gl/maps/dScYJjtu87cBHCGq6" target="_blank" rel="noreferrer">
                 Anfahrt
               </a>
             </Popup>

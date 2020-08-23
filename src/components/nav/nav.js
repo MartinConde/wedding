@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { motion } from "framer-motion"
 import DmToggle from "./dmToggle"
 
 export default function Nav() {

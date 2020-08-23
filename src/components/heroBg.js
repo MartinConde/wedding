@@ -18,7 +18,7 @@ const HeroBgWrapper = ({ props, className, children }) => {
   } = useStaticQuery(
     graphql`
       query {
-        mobileImageDark: file(relativePath: { eq: "stockDark.jpg" }) {
+        mobileImageDark: file(relativePath: { eq: "stockDarkMob.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 490, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
@@ -32,7 +32,7 @@ const HeroBgWrapper = ({ props, className, children }) => {
             }
           }
         }
-        mobileImageLight: file(relativePath: { eq: "stockLight.jpg" }) {
+        mobileImageLight: file(relativePath: { eq: "stockLightMob.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 490, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
@@ -55,7 +55,7 @@ const HeroBgWrapper = ({ props, className, children }) => {
     mobileImageDark.childImageSharp.fluid,
     {
       ...desktopImageDark.childImageSharp.fluid,
-      media: `(min-width: 491px)`,
+      media: `(min-width: 810px)`,
     },
   ]
 
@@ -63,7 +63,7 @@ const HeroBgWrapper = ({ props, className, children }) => {
     mobileImageLight.childImageSharp.fluid,
     {
       ...desktopImageLight.childImageSharp.fluid,
-      media: `(min-width: 491px)`,
+      media: `(min-width: 810px)`,
     },
   ]
 

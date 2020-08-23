@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import Airtable from "airtable"
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion"
+import { motion, AnimateSharedLayout } from "framer-motion"
 import styled, { keyframes } from "styled-components"
 import FloatingLabelInput from "react-floating-label-input"
 import confetti from "canvas-confetti"

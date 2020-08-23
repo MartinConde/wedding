@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styled, { keyframes } from "styled-components"
 import SEO from "../components/seo"
 import axios from "axios"

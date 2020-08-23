@@ -20,6 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images`,
+        path: `${__dirname}/src/fonts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `slider`,
         path: `${__dirname}/src/slider`,
       },
@@ -39,14 +46,6 @@ module.exports = {
       options: {
         rule: {
           include: /\.inline\.svg$/,
-        },
-      },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        typekit: {
-          id: "akv0nqo",
         },
       },
     },

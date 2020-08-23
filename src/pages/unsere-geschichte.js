@@ -1,10 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Slider from "../components/slider"
-import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 import styled from "styled-components"
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
 const SplitWrapper = styled.div`

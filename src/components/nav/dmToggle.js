@@ -1,4 +1,3 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React, { useContext } from "react"
 import styled from "styled-components"
 import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"

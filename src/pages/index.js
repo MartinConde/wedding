@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import HeroBgWrapper from "../components/heroBg"
 
@@ -44,7 +42,6 @@ const HeroContent = styled.div`
 `
 
 const HeroTitle = styled(motion.h1)`
-  font-family: great-vibes, sans-serif;
   font-size: 60px;
   text-align: center;
   color: ${props => props.theme.textColor};
@@ -54,7 +51,6 @@ const HeroTitle = styled(motion.h1)`
 `
 
 const HeroDesc = styled.p`
-  font-family: raleway, sans-serif;
   font-weight: 700;
   font-style: italic;
   text-align: center;

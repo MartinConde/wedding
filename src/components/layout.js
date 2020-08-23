@@ -2,11 +2,14 @@ import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 import React, { useContext, useEffect } from "react"
 import styled, { withTheme } from "styled-components"
 import { AnimateSharedLayout } from "framer-motion"
-import "./layout.css"
+
 import Nav from "./nav/nav"
 import MobileNavDark from "./nav/mobileNavDark"
 import MobileNavLight from "./nav/mobileNavLight"
 import Media from 'react-media';
+import "../fonts/fonts.css"
+import "./layout.css"
+
 
 const MainWrapper = styled.div`
   background-color: ${props => props.theme.bgColor};
