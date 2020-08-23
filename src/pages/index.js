@@ -23,7 +23,7 @@ const BgWrapper = styled(motion.div)`
   left: 0;
 `
 const BG = styled(HeroBgWrapper)`
-height: calc(100vh - 89px);
+  height: calc(100vh - 89px);
   width: 100%;
   position: absolute;
   top: 0;
@@ -34,7 +34,7 @@ height: calc(100vh - 89px);
   }
 `
 
-const HeroContent = styled.div`
+const HeroContent = styled(motion.div)`
   position: relative;
   z-index: 9;
   width: 100%;
@@ -75,8 +75,8 @@ const HeroButtons = styled.div`
   display: none;
   @media (min-width: 1200px) {
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 `
 
@@ -106,13 +106,19 @@ const IndexPage = () => (
   <>
     <SEO title="Home" />
     <ContentWrapper>
-      <BgWrapper layoutId="bg" transition={{ duration: 0.5 }}>
+      <BgWrapper>
         <BG />
       </BgWrapper>
-      <HeroContent>
-        <HeroTitle layoutId="underline">Wir sagen ja!</HeroTitle>
+      <HeroContent
+        layout
+        initial={{ y: "50px", opacity: "0" }}
+        animate={{ y: "0", opacity: "1" }}
+        exit={{ y: "50px", opacity: "0" }}
+      >
+        <HeroTitle>Wir sagen ja!</HeroTitle>
         <HeroDesc>
-          Wir möchten uns das Ja-Wort geben und würden uns freuen wenn<br /> ihr diesen unvergesslichen Tag mit uns verbringen würdet
+          Wir möchten uns das Ja-Wort geben und würden uns freuen wenn
+          <br /> ihr diesen unvergesslichen Tag mit uns verbringen würdet
         </HeroDesc>
         <HeroButtons>
           <Btn to="/details/">Details</Btn>

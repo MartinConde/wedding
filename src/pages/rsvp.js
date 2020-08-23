@@ -7,6 +7,7 @@ import confetti from "canvas-confetti"
 import ReCAPTCHA from "react-google-recaptcha"
 import { ThemeManagerContext } from "gatsby-styled-components-dark-mode"
 import SEO from "../components/seo"
+import axios from 'axios'
 
 const RsvpForm = styled.form`
   background: ${props => props.theme.bgColor};
@@ -129,7 +130,12 @@ const UiButtonRemove = styled.button`
   }
 `
 
-const SucessMsg = styled.div``
+const SucessMsg = styled.div`
+
+h2 {
+  font-size: 5vw;
+}
+`
 
 const SubmitBtn = styled(motion.button)`
   display: flex;
@@ -353,24 +359,40 @@ class NameForm extends React.Component {
 
     try {
       const token = await this.recaptchaRef.current.executeAsync()
-      const response = await base("Gaeste")
-      this.state.users.map(user => {
-        base("Gaeste").create({
-          Name: `${user.name}`,
-          Email: `${user.email}`,
-          Allergien: `${user.allergien}`,
-        })
-        return response
+      const gresponse = await fetch("/.netlify/functions/recaptcha", {
+        method: "POST",
+        body: token,
       })
-      const result = await response
-      console.log(result)
-      setTimeout(() => this.setState({ formState: "success" }), 1500)
+
+      console.log(gresponse)
+
+      if (gresponse.status === 200) {
+        const response = await base("Gaeste")
+        this.state.users.map(user => {
+          base("Gaeste").create({
+            Name: `${user.name}`,
+            Email: `${user.email}`,
+            Allergien: `${user.allergien}`,
+          })
+          return response
+        })
+        const result = await response
+        setTimeout(() => this.setState({ formState: "success" }), 1500)
       setTimeout(() => this.setState({ formState: "hidden" }), 1500)
       setTimeout(() => this.handleConfetti(), 2000)
+      }
+
+      
+
+      
+      /*console.log(result)*/
+      
     } catch (error) {
       console.error(error)
       this.setState({ formState: "error" })
     }
+    this.recaptchaRef.current.reset()
+    
   }
 
   handleConfetti = e => {

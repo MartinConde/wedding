@@ -20,29 +20,29 @@ const HeroBgWrapper = ({ props, className, children }) => {
       query {
         mobileImageDark: file(relativePath: { eq: "stockDarkMob.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 490, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(maxWidth: 810, quality: 85) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         desktopImageDark: file(relativePath: { eq: "stockDark.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(quality: 85, maxWidth: 4160) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         mobileImageLight: file(relativePath: { eq: "stockLightMob.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 490, quality: 100) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(maxWidth: 810, quality: 85) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         desktopImageLight: file(relativePath: { eq: "stockLight.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp
+            fluid(quality: 85, maxWidth: 4160) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
