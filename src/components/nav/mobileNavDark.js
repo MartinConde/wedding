@@ -37,7 +37,7 @@ const MobileNavDark = (props) => {
       <NavItem>
         <IconLink
           target={"/wunschliste"}
-          text={"Wunschliste"}
+          text={"Wünsche"}
           animation={WunschlisteIconLight}
         />
       </NavItem>

@@ -49,11 +49,11 @@ const StyledLink = styled(Link) `
   flex-direction: column;
 
   .animation-container {
-    max-width: 50px;
+    max-width: 45px;
     margin: 0 auto;
   }
 `
 
 const LinkText = styled.span `
-  font-size: 13px;
+  font-size: 12px;
 `
