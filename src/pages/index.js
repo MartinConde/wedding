@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import HeroBgWrapper from "../components/heroBg"
+import HeroBgWrapperTest from "../components/heroBgTest"
 
 const ContentWrapper = styled.div`
   height: 100vh;
@@ -22,12 +22,13 @@ const BgWrapper = styled(motion.div)`
   top: 0;
   left: 0;
 `
-const BG = styled(HeroBgWrapper)`
+const BG = styled(HeroBgWrapperTest)`
   height: calc(100vh - 89px);
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
 
   @media (min-width: 1200px) {
     height: 100vh;
@@ -104,13 +105,12 @@ const Btn = styled(Link)`
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Wir sagen ja" description="Wir möchten uns das Ja-Wort geben und würden uns freuen wenn ihr diesen unvergesslichen Tag mit uns verbringen würdet" />
     <ContentWrapper>
       <BgWrapper>
         <BG />
       </BgWrapper>
       <HeroContent
-        layout
         initial={{ y: "50px", opacity: "0" }}
         animate={{ y: "0", opacity: "1" }}
         exit={{ y: "50px", opacity: "0" }}

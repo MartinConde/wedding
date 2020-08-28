@@ -69,6 +69,9 @@ module.exports = {
         theme_color: `#6882a1`,
         display: `minimal-ui`,
         icon: `src/images/favicon.svg`, 
+        icon_options: {
+          purpose: `maskable`,
+        },
       },
     },
     `gatsby-plugin-offline`,
