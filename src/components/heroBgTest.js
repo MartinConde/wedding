@@ -116,7 +116,7 @@ const HeroBg = styled(motion.div)`
   }
 
   &.bgDark::after {
-    background: linear-gradient(180deg, rgba(51,51,51,.5) 0%, rgba(51,51,51,.3) 100%);
+    background: linear-gradient(180deg, rgba(51,51,51,.3) 0%, rgba(51,51,51,.5) 100%);
   }
 
   &.bgLight::after {
